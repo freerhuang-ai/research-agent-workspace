@@ -11,6 +11,9 @@ RUN apt-get update && \
         r-base-dev \
         build-essential \
         git \
+        git-lfs \
+        git-lfs \
+        git-lfs \
         curl \
         openssh-client \
         libcurl4-openssl-dev \
