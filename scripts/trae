@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+TRAE_DIR="${TRAE_DIR:-$HOME/tools/trae-agent}"
+CLI="$TRAE_DIR/.venv/bin/trae-cli"
+
+if [ ! -x "$CLI" ]; then
+  echo "Trae Agent not found at $CLI"
+  echo "Rebuild the Codespace or run .devcontainer/post-create.sh"
+  exit 1
+fi
+
+exec "$CLI" "$@"
